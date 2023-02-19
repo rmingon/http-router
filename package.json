@@ -1,0 +1,23 @@
+{
+  "name": "http-router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmingon/http-router.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmingon/http-router/issues"
+  },
+  "homepage": "https://github.com/rmingon/http-router#readme",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
