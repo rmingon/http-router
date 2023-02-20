@@ -1,20 +1,20 @@
 {
-  "name": "http-router",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "http-router-only-decorators",
+  "version": "0.0.1",
+  "description": "Ultra-light http router work only with decorators and built-in HTTP nodejs module.",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "npx tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "ts": "ts-node src/index.ts"
+    "build" : "tsc",
+    "prepare" : "npm run build",
+    "test": "ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rmingon/http-router.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["decorator", "http-router"],
+  "author": "RMINGON",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/rmingon/http-router/issues"
   },
@@ -22,5 +22,7 @@
   "devDependencies": {
     "typescript": "^4.9.5",
     "@types/node": "^18.14.0"
-  }
+  },
+  "files": ["lib/**/*"],
+  "types": "lib/index.d.ts"
 }
