@@ -4,6 +4,7 @@
 ```bash
 npm i http-router-only-decorators
 ```
+
 ### Exemple
 ```typescript
 import {Method, Req, Res, Route} from "http-router-only-decorators";
