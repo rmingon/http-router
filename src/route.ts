@@ -10,8 +10,9 @@ interface RouteDeclaration {
 
 http.createServer(function (req, res) {
   const _url = url.parse(req.url ?? '')
+  const url_with_params = req.url?.split('/').map((el: string) => parseInt(el) ? ':id' : el).join('/')
   try {
-    return routes[req.url ?? ''][req.method ?? ''](req, res)
+    return routes[url_with_params ?? ''][req.method ?? ''](req, res)
   } catch (e) {
     res.writeHead(500, {'Content-Type': 'json'});
     res.write(JSON.stringify(e));
