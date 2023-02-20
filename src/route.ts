@@ -1,10 +1,25 @@
-export let routes : Record<string, any> = {}
+import http from "http";
+import url from "url";
+let routes : Record<string, any> = {}
 
 interface RouteDeclaration {
   params?: string
   key: string
   method: string
 }
+
+http.createServer(function (req, res) {
+  const _url = url.parse(req.url ?? '')
+  try {
+    return routes[req.url ?? ''][req.method ?? ''](req, res)
+  } catch (e) {
+    res.writeHead(500, {'Content-Type': 'json'});
+    res.write(JSON.stringify(e));
+    return res.end()
+  }
+
+}).listen(process.env.PORT ?? 8080);
+
 
 export default function Route(route: string) {
   return function<T extends { new (...args: any[]): Record<any, any> }>(target: T) {
