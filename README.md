@@ -1,10 +1,12 @@
 # Ultra light http router work only with decorators
 
+### Install
+```bash
+npm i http-router-only-decorators
+```
 ### Exemple
 ```typescript
-import Route from './route'
-import Method from './method'
-import {Req, Res} from './type'
+import {Method, Req, Res, Route} from "http-router-only-decorators";
 
 @Route('/users')
 class Users {
